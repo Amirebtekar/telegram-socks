@@ -1,0 +1,3 @@
+https://t.me/socks?server=127.0.0.1&port=10808
+https://t.me/socks?server=2.144.2.30&port=1080
+https://t.me/socks?server=176.65.242.176&port=1080)**
