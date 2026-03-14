@@ -9,14 +9,10 @@ api_id = 123456
 api_hash = "API_HASH"
 
 channels = [
-    "Farah_Proxy",
-    "NPROXY",
-    "Pruuxi",
-    "saministamm",
-    "configraygan",
+    "NetAccount",
 ]
 
-limit_messages = 80
+limit_messages = 120
 
 pattern = r"https://t\.me/socks\?server=([^&\s]+)&port=([^&\s]+)(?:&user=([^&\s]+)&pass=([^&\s]+))?"
 
@@ -54,7 +50,8 @@ with TelegramClient("session", api_id, api_hash) as client:
 
     telegram_links = set()
     socks_links = set()
-    country_socks = []
+
+    country_map = {}
 
     for channel in channels:
 
@@ -85,27 +82,40 @@ with TelegramClient("session", api_id, api_hash) as client:
 
                 country = get_country(server)
 
-                country_socks.append(f"{country} {socks}")
+                if country not in country_map:
+                    country_map[country] = set()
+
+                country_map[country].add(socks)
 
         time.sleep(1)
 
-    with open("telegram_socks.txt","w",encoding="utf-8") as f:
-        for i in telegram_links:
-            f.write(i+"\n")
 
-    with open("socks5.txt","w",encoding="utf-8") as f:
-        for i in socks_links:
-            f.write(i+"\n")
+# فایل های اصلی
+with open("telegram_socks.txt","w",encoding="utf-8") as f:
+    for i in telegram_links:
+        f.write(i+"\n")
 
-    with open("country_socks.txt","w",encoding="utf-8") as f:
-        for i in country_socks:
-            f.write(i+"\n")
+with open("socks5.txt","w",encoding="utf-8") as f:
+    for i in socks_links:
+        f.write(i+"\n")
+
+
+# فایل جدا برای هر کشور
+for country, socks_list in country_map.items():
+
+    filename = f"{country}.txt"
+
+    with open(filename,"w",encoding="utf-8") as f:
+
+        for s in socks_list:
+            f.write(s+"\n")
 
 
 def update_github():
 
     subprocess.run(["git","add","."],check=True)
     subprocess.run(["git","commit","-m","auto update socks"],check=False)
+    subprocess.run(["git","pull","--rebase","origin","main"],check=False)
     subprocess.run(["git","push"],check=True)
 
 update_github()
