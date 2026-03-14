@@ -1,6 +1,8 @@
 import re
 import base64
 import time
+import requests
+import subprocess
 from telethon.sync import TelegramClient
 
 api_id = 123456
@@ -33,11 +35,26 @@ def convert(server, port, user=None, password=None):
     else:
         return f"socks://{server}:{port}#sock5"
 
+def get_country(ip):
+
+    try:
+        r = requests.get(f"http://ip-api.com/json/{ip}", timeout=5)
+        data = r.json()
+
+        if data["status"] == "success":
+            return data["countryCode"]
+
+    except:
+        pass
+
+    return "UN"
+
 
 with TelegramClient("session", api_id, api_hash) as client:
 
     telegram_links = set()
     socks_links = set()
+    country_socks = []
 
     for channel in channels:
 
@@ -62,18 +79,35 @@ with TelegramClient("session", api_id, api_hash) as client:
 
                 telegram_links.add(tg_link)
 
-                socks_links.add(convert(server, port, user, password))
+                socks = convert(server, port, user, password)
+
+                socks_links.add(socks)
+
+                country = get_country(server)
+
+                country_socks.append(f"{country} {socks}")
 
         time.sleep(1)
 
-    with open("telegram_socks.txt", "w", encoding="utf-8") as f:
+    with open("telegram_socks.txt","w",encoding="utf-8") as f:
         for i in telegram_links:
-            f.write(i + "\n")
+            f.write(i+"\n")
 
-    with open("socks5.txt", "w", encoding="utf-8") as f:
+    with open("socks5.txt","w",encoding="utf-8") as f:
         for i in socks_links:
-            f.write(i + "\n")
+            f.write(i+"\n")
+
+    with open("country_socks.txt","w",encoding="utf-8") as f:
+        for i in country_socks:
+            f.write(i+"\n")
+
+
+def update_github():
+
+    subprocess.run(["git","add","."],check=True)
+    subprocess.run(["git","commit","-m","auto update socks"],check=False)
+    subprocess.run(["git","push"],check=True)
+
+update_github()
 
 print("Done ✅")
-print("Telegram socks:", len(telegram_links))
-print("Converted socks:", len(socks_links))
