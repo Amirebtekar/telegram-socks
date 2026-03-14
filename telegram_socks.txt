@@ -1,3 +1,9 @@
-https://t.me/socks?server=2.144.21.81&port=1080
+https://t.me/socks?server=176.65.242.176&port=1080
+https://t.me/socks?server=2.180.29.218&port=2020&user=2222&pass=2222
+https://t.me/socks?server=127.0.0.1&port=10808
 https://t.me/socks?server=176.65.242.179&port=1080
 https://t.me/socks?server=188.121.119.161&port=1080
+https://t.me/socks?server=0e0a9df5-8d5e-4263-aa93-82720cfe14ca.hsvc.ir&port=31111
+https://t.me/socks?server=92.242.217.200&port=2060&user=erfan&pass=147369
+https://t.me/socks?server=2.144.2.30&port=1080
+https://t.me/socks?server=2.144.21.81&port=1080

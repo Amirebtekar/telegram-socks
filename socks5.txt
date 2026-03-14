@@ -1,3 +1,9 @@
-socks://176.65.242.179:1080#sock5
+socks://2.144.2.30:1080#sock5
+socks://MjIyMjoyMjIy@2.180.29.218:2020#sock5
+socks://127.0.0.1:10808#sock5
+socks://176.65.242.176:1080#sock5
+socks://0e0a9df5-8d5e-4263-aa93-82720cfe14ca.hsvc.ir:31111#sock5
 socks://188.121.119.161:1080#sock5
+socks://ZXJmYW46MTQ3MzY5@92.242.217.200:2060#sock5
 socks://2.144.21.81:1080#sock5
+socks://176.65.242.179:1080#sock5

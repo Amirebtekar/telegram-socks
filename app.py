@@ -9,6 +9,12 @@ api_id = 123456
 api_hash = "API_HASH"
 
 channels = [
+    "Farah_Proxy",
+    "NPROXY",
+    "Pruuxi",
+    "saministamm",
+    "configraygan",
+    "gilass_on",
     "NetAccount",
 ]
 
