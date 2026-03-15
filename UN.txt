@@ -1,1 +1,2 @@
 socks://127.0.0.1:10808#sock5
+socks://JTQwc2V4eWJveXZwbjolNDBzZXh5Ym95dnBu@127.0.0.1:10808#sock5
