@@ -1,9 +1,10 @@
-socks://176.65.242.176:1080#sock5
-socks://QXppcjY5OTc4YmFjYTdjY2I6QXppcjY5OTc4YmFjYTdjY2I=@78.157.50.36:3389#sock5
-socks://MXo5cmo1bEhKeTo0RXZBZXA4Rkhz@193.151.134.209:52224#sock5
-socks://0e0a9df5-8d5e-4263-aa93-82720cfe14ca.hsvc.ir:31111#sock5
-socks://188.121.119.161:1080#sock5
+socks://2.144.20.19:98#sock5
 socks://2.144.21.81:1080#sock5
-socks://2.144.2.245:5201#sock5
 socks://176.65.242.179:1080#sock5
 socks://YXJzaDI6bipXNGNtaDZ0Mzg=@79.127.125.7:1092#sock5
+socks://QXppcjY5OTc4YmFjYTdjY2I6QXppcjY5OTc4YmFjYTdjY2I=@78.157.50.36:3389#sock5
+socks://QXppcjY5YjRlNTQxMjFhYWQ6QXppcjY5YjRlNTQxMjFhYWQ=@socks3.nirvana-smoke.com:3389#sock5
+socks://cmV6OjM5NjM=@87.248.156.106:8585#sock5
+socks://188.121.119.161:1080#sock5
+socks://MzA2ODI0NV90ZXN0OjMwNjgyNDVfdGVzdA==@azir_proxy_ezterar.moonvira.com:53#sock5
+socks://193.111.236.173:8844#sock5
