@@ -1,9 +1,1 @@
-socks://176.65.242.176:1080#sock5
-socks://2.144.21.81:1080#sock5
-socks://176.65.242.179:1080#sock5
-socks://YXJzaDI6bipXNGNtaDZ0Mzg=@79.127.125.7:1092#sock5
-socks://QXppcjY5YjRlNTQxMjFhYWQ6QXppcjY5YjRlNTQxMjFhYWQ=@socks3.nirvana-smoke.com:3389#sock5
 socks://127.0.0.1:1080#sock5
-socks://0e0a9df5-8d5e-4263-aa93-82720cfe14ca.hsvc.ir:31111#sock5
-socks://MXo5cmo1bEhKeTo0RXZBZXA4Rkhz@193.151.134.209:52224#sock5
-socks://2.144.2.245:5201#sock5
