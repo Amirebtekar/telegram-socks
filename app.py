@@ -15,6 +15,8 @@ channels = [
     "saministamm",
     "configraygan",
     "gilass_on",
+    "yek_amiram",
+    "@ShadowProxy66",
     "NetAccount",
 ]
 
